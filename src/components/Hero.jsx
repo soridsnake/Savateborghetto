@@ -49,7 +49,7 @@ const Hero = () => {
 
             {/* Marquee Background Text */}
             <div className="absolute top-1/3 left-0 w-full overflow-hidden whitespace-nowrap opacity-[0.03] select-none pointer-events-none z-0">
-                <motion.div variants={marqueeVariants} animate="animate" className="inline-block font-heading font-black text-[15rem] leading-none uppercase">
+                <motion.div variants={marqueeVariants} animate="animate" className="inline-block font-heading font-black text-[8rem] md:text-[15rem] leading-none uppercase">
                     SAVATE • BOXE FRANCESE • CHASSÉ • FOUETTÉ • SAVATE • BOXE FRANCESE •
                 </motion.div>
             </div>
@@ -67,13 +67,13 @@ const Hero = () => {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.2, duration: 0.8 }}
-                            className="text-accentBlue font-heading font-bold tracking-widest uppercase mb-4 text-sm md:text-base flex items-center justify-center lg:justify-start gap-2"
+                            className="text-accentBlue font-heading font-bold tracking-widest uppercase mb-4 text-xs sm:text-sm md:text-base flex items-center justify-center lg:justify-start gap-2"
                         >
                             <div className="w-8 h-[2px] bg-accentBlue hidden md:block"></div>
                             Polisportiva Dilettantistica Borghetto 1867
                         </motion.h2>
 
-                        <h1 className="text-6xl md:text-7xl lg:text-8xl font-black leading-[1.1] mb-6 tracking-tight relative">
+                        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[1.1] mb-6 tracking-tight relative">
                             L'ELEGANZA DELLA <br className="hidden md:block" />
                             <span className="relative inline-block mt-2">
                                 <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-accentRed to-white">
@@ -93,7 +93,7 @@ const Hero = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.6, duration: 0.8 }}
-                            className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed drop-shadow-lg"
+                            className="text-gray-400 text-base sm:text-lg md:text-xl max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed drop-shadow-lg"
                         >
                             Dal 1867 tramandiamo i segreti della <strong>Boxe Francese</strong> a Genova Certosa.
                             Un ambiente sportivo storico e rigoroso dove la nobile arte della Savate forgia atleti eleganti e temibili sul ring.

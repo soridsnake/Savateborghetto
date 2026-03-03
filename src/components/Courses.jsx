@@ -98,7 +98,7 @@ const Courses = () => {
                                     layout: { type: "spring", stiffness: 200, damping: 30 },
                                     opacity: { duration: 0.5, delay: index * 0.1 }
                                 }}
-                                className={`relative rounded-[2rem] overflow-hidden cursor-pointer group isolation-auto h-64 lg:h-full ${isActive ? 'lg:flex-[3]' : 'lg:flex-[0.8]'}`}
+                                className={`relative rounded-[2rem] overflow-hidden cursor-pointer group isolation-auto h-52 md:h-64 lg:h-full ${isActive ? 'lg:flex-[3]' : 'lg:flex-[0.8]'}`}
                             >
                                 {/* Background Image */}
                                 <div
@@ -184,12 +184,12 @@ const Courses = () => {
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.9, y: 20 }}
                             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                            className="bg-dark border border-white/10 rounded-2xl w-full max-w-3xl overflow-hidden shadow-2xl relative"
+                            className="bg-dark border border-white/10 rounded-2xl w-full max-w-3xl overflow-hidden shadow-2xl relative max-h-[90vh] flex flex-col"
                             onClick={(e) => e.stopPropagation()}
                         >
                             {/* Modal Banner */}
                             <div
-                                className="h-48 md:h-64 w-full bg-cover bg-center relative"
+                                className="h-40 md:h-64 w-full bg-cover bg-center relative shrink-0"
                                 style={{ backgroundImage: `url(${selectedCourse.image})` }}
                             >
                                 <div className={`absolute inset-0 bg-gradient-to-tr ${selectedCourse.color} mix-blend-overlay opacity-60`}></div>
@@ -197,12 +197,12 @@ const Courses = () => {
 
                                 <button
                                     onClick={() => setSelectedCourse(null)}
-                                    className="absolute top-4 right-4 bg-black/50 hover:bg-black/80 text-white rounded-full p-2 transition-colors border border-white/10"
+                                    className="absolute top-4 right-4 bg-black/50 hover:bg-black/80 text-white rounded-full p-2 transition-colors border border-white/10 z-10"
                                 >
                                     <X className="w-6 h-6" />
                                 </button>
 
-                                <div className="absolute bottom-6 left-6 md:left-10">
+                                <div className="absolute bottom-6 left-6 md:left-10 z-10">
                                     <h4 className="text-accentBlue text-xs md:text-sm font-bold uppercase tracking-widest mb-1 shadow-black">
                                         {selectedCourse.subtitle}
                                     </h4>
@@ -213,12 +213,12 @@ const Courses = () => {
                             </div>
 
                             {/* Modal Content */}
-                            <div className="p-6 md:p-10">
+                            <div className="p-6 md:p-10 overflow-y-auto custom-scrollbar">
                                 <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
                                     {selectedCourse.detailedDescription}
                                 </p>
 
-                                <div className="flex justify-end">
+                                <div className="flex justify-end mt-auto">
                                     <a href="#contact" onClick={() => setSelectedCourse(null)} className="btn-primary flex items-center gap-2 text-sm">
                                         Prenota una Lezione <ChevronRight className="w-4 h-4" />
                                     </a>
