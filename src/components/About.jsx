@@ -64,30 +64,30 @@ const About = () => {
                 </motion.div>
 
                 {/* Dynamic Stats Row */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-                    <div className="glass-card flex flex-col items-center justify-center p-6 border-accentRed/20 hover:border-accentRed/50 transition-colors">
-                        <h3 className="text-4xl md:text-5xl font-black text-white mb-2 font-heading">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mb-16">
+                    <div className="glass-card flex flex-col items-center justify-center p-4 md:p-6 border-accentRed/20 hover:border-accentRed/50 transition-colors">
+                        <h3 className="text-3xl md:text-5xl font-black text-white mb-1 md:mb-2 font-heading">
                             <AnimatedCounter from={0} to={1867} duration={2.5} />
                         </h3>
-                        <p className="text-accentRed text-sm uppercase tracking-widest font-bold">Fondazione</p>
+                        <p className="text-accentRed text-xs md:text-sm uppercase tracking-widest font-bold">Fondazione</p>
                     </div>
-                    <div className="glass-card flex flex-col items-center justify-center p-6 border-accentBlue/20 hover:border-accentBlue/50 transition-colors">
-                        <h3 className="text-4xl md:text-5xl font-black text-white mb-2 font-heading">
+                    <div className="glass-card flex flex-col items-center justify-center p-4 md:p-6 border-accentBlue/20 hover:border-accentBlue/50 transition-colors">
+                        <h3 className="text-3xl md:text-5xl font-black text-white mb-1 md:mb-2 font-heading">
                             +<AnimatedCounter from={0} to={500} duration={2} />
                         </h3>
-                        <p className="text-accentBlue text-sm uppercase tracking-widest font-bold">Atleti Formati</p>
+                        <p className="text-accentBlue text-xs md:text-sm uppercase tracking-widest font-bold">Atleti Formati</p>
                     </div>
-                    <div className="glass-card flex flex-col items-center justify-center p-6 border-accentRed/20 hover:border-accentRed/50 transition-colors">
-                        <h3 className="text-4xl md:text-5xl font-black text-white mb-2 font-heading">
+                    <div className="glass-card flex flex-col items-center justify-center p-4 md:p-6 border-accentRed/20 hover:border-accentRed/50 transition-colors">
+                        <h3 className="text-3xl md:text-5xl font-black text-white mb-1 md:mb-2 font-heading">
                             +<AnimatedCounter from={0} to={50} duration={2} />
                         </h3>
-                        <p className="text-accentRed text-sm uppercase tracking-widest font-bold">Gare Vinte</p>
+                        <p className="text-accentRed text-xs md:text-sm uppercase tracking-widest font-bold">Gare Vinte</p>
                     </div>
-                    <div className="glass-card flex flex-col items-center justify-center p-6 border-accentBlue/20 hover:border-accentBlue/50 transition-colors">
-                        <h3 className="text-4xl md:text-5xl font-black text-white mb-2 font-heading">
+                    <div className="glass-card flex flex-col items-center justify-center p-4 md:p-6 border-accentBlue/20 hover:border-accentBlue/50 transition-colors">
+                        <h3 className="text-3xl md:text-5xl font-black text-white mb-1 md:mb-2 font-heading">
                             <AnimatedCounter from={0} to={100} duration={2} />%
                         </h3>
-                        <p className="text-accentBlue text-sm uppercase tracking-widest font-bold">Passione</p>
+                        <p className="text-accentBlue text-xs md:text-sm uppercase tracking-widest font-bold">Passione</p>
                     </div>
                 </div>
 
@@ -97,40 +97,40 @@ const About = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-50px" }}
-                    className="grid md:grid-cols-3 gap-8 mb-24"
+                    className="grid md:grid-cols-3 gap-6 md:gap-8 mb-24"
                 >
-                    <motion.div variants={itemVariants} className="glass-card group hover:border-accentRed/50 hover:-translate-y-2 transition-all duration-300">
-                        <div className="w-14 h-14 rounded-xl bg-accentRed/10 flex items-center justify-center mb-6 overflow-hidden">
+                    <motion.div variants={itemVariants} className="glass-card p-6 md:p-8 group hover:border-accentRed/50 hover:-translate-y-2 transition-all duration-300">
+                        <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-accentRed/10 flex items-center justify-center mb-6 overflow-hidden">
                             <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.6 }}>
-                                <History className="text-accentRed w-8 h-8" />
+                                <History className="text-accentRed w-6 h-6 md:w-8 md:h-8" />
                             </motion.div>
                         </div>
-                        <h3 className="text-xl font-bold mb-3 text-white">Tradizione Secolare</h3>
+                        <h3 className="text-lg md:text-xl font-bold mb-3 text-white">Tradizione Secolare</h3>
                         <p className="text-gray-400 text-sm leading-relaxed">
                             Dalle origini ottocentesche ad oggi, portiamo avanti i valori fondanti di rispetto, dedizione e fratellanza che contraddistinguono la nostra sede storica.
                         </p>
                     </motion.div>
 
-                    <motion.div variants={itemVariants} className="glass-card group hover:border-accentBlue/50 relative overflow-hidden hover:-translate-y-2 transition-all duration-300">
+                    <motion.div variants={itemVariants} className="glass-card p-6 md:p-8 group hover:border-accentBlue/50 relative overflow-hidden hover:-translate-y-2 transition-all duration-300">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-accentBlue/5 rounded-bl-[100px] -z-10 group-hover:bg-accentBlue/20 transition-colors duration-500"></div>
-                        <div className="w-14 h-14 rounded-xl bg-accentBlue/10 flex items-center justify-center mb-6 overflow-hidden">
+                        <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-accentBlue/10 flex items-center justify-center mb-6 overflow-hidden">
                             <motion.div whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 300 }}>
-                                <Trophy className="text-accentBlue w-8 h-8" />
+                                <Trophy className="text-accentBlue w-6 h-6 md:w-8 md:h-8" />
                             </motion.div>
                         </div>
-                        <h3 className="text-xl font-bold mb-3 text-white">Eccellenza Sportiva</h3>
+                        <h3 className="text-lg md:text-xl font-bold mb-3 text-white">Eccellenza Sportiva</h3>
                         <p className="text-gray-400 text-sm leading-relaxed">
                             Un vivaio di campioni. I nostri atleti gareggiano regolarmente nei circuiti F.I.S.A., portando in alto i colori del Borghetto 1867.
                         </p>
                     </motion.div>
 
-                    <motion.div variants={itemVariants} className="glass-card group hover:border-white/30 hover:-translate-y-2 transition-all duration-300">
-                        <div className="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center mb-6 overflow-hidden">
+                    <motion.div variants={itemVariants} className="glass-card p-6 md:p-8 group hover:border-white/30 hover:-translate-y-2 transition-all duration-300">
+                        <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white/5 flex items-center justify-center mb-6 overflow-hidden">
                             <motion.div whileHover={{ y: -5 }} transition={{ yoyo: Infinity, duration: 0.3 }}>
-                                <Users className="text-white w-8 h-8" />
+                                <Users className="text-white w-6 h-6 md:w-8 md:h-8" />
                             </motion.div>
                         </div>
-                        <h3 className="text-xl font-bold mb-3 text-white">Ambiente Inclusivo</h3>
+                        <h3 className="text-lg md:text-xl font-bold mb-3 text-white">Ambiente Inclusivo</h3>
                         <p className="text-gray-400 text-sm leading-relaxed">
                             Un luogo per tutti. Dai principianti agli agonisti, offriamo percorsi personalizzati in un clima di supporto reciproco e crescita personale.
                         </p>
@@ -138,20 +138,20 @@ const About = () => {
                 </motion.div>
 
                 {/* Agonismo & Gradi Section */}
-                <div className="grid lg:grid-cols-2 gap-12 mb-24">
+                <div className="grid lg:grid-cols-2 gap-8 md:gap-12 mb-24">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="glass-card p-8 border-accentRed/30 relative overflow-hidden group"
+                        className="glass-card p-6 md:p-8 border-accentRed/30 relative overflow-hidden group"
                     >
                         <div className="absolute top-0 right-0 w-32 h-32 bg-accentRed/5 rounded-full blur-2xl -z-10"></div>
-                        <h3 className="text-3xl font-black text-white mb-4 uppercase">L'Agonismo e il <span className="text-accentRed">Confronto</span></h3>
-                        <p className="text-gray-300 leading-relaxed mb-4">
+                        <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase">L'Agonismo e il <span className="text-accentRed">Confronto</span></h3>
+                        <p className="text-gray-300 leading-relaxed mb-4 text-sm md:text-base">
                             Il nostro percorso sportivo non si ferma alle mure della palestra. Per chi sceglie la via competitiva, <strong>il ring è il banco di prova definitivo</strong>.
                         </p>
-                        <p className="text-gray-400 leading-relaxed">
+                        <p className="text-gray-400 leading-relaxed text-sm md:text-base">
                             Organizziamo e prepariamo regolarmente i nostri atleti per veri <strong>incontri agonistici</strong>. Non ci limitiamo a sfidare altre scuole o accademie di Savate, ma promuoviamo apertamente il confronto costruttivo salendo sul ring contro sfidanti provenienti da <strong>discipline marziali esterne</strong>, come la Kickboxing, K1 o Muay Thai. Mettersi in gioco contro stili e background differenti affina il nostro bagaglio tecnico e forgia una tempra di ferro.
                         </p>
                     </motion.div>
@@ -161,10 +161,10 @@ const About = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="glass-card p-8 border-accentBlue/30 relative overflow-hidden"
+                        className="glass-card p-6 md:p-8 border-accentBlue/30 relative overflow-hidden"
                     >
                         <div className="absolute top-0 left-0 w-32 h-32 bg-accentBlue/5 rounded-full blur-2xl -z-10"></div>
-                        <h3 className="text-3xl font-black text-white mb-4 uppercase">Il Percorso dei <span className="text-accentBlue">Guanti</span></h3>
+                        <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase">Il Percorso dei <span className="text-accentBlue">Guanti</span></h3>
                         <p className="text-gray-300 leading-relaxed mb-6">
                             Nella Savate non esistono le "cinture". La progressione dell'atleta è scandita gerarchicamente e storicamente dal colore dei <strong>Guanti D'Arme</strong>. Ognuno si conquista superando rigidissimi esami pratici presso atenei F.I.S.A.:
                         </p>

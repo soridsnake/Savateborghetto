@@ -33,7 +33,7 @@ const Contact = () => {
                         viewport={{ once: true }}
                         className="space-y-8"
                     >
-                        <div className="glass-card flex items-start gap-6 p-6 group hover:border-accentRed/50 transition-colors">
+                        <div className="glass-card flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 sm:gap-6 p-6 md:p-8 group hover:border-accentRed/50 transition-colors">
                             <div className="w-12 h-12 rounded-full bg-accentRed/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accentRed transition-colors">
                                 <MapPin className="text-accentRed group-hover:text-white transition-colors" />
                             </div>
@@ -44,44 +44,44 @@ const Contact = () => {
                                     href="https://maps.google.com/?q=Via+Sidney+Sonnino+14r+Genova"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="mt-3 inline-flex items-center gap-2 text-sm text-accentRed hover:text-white font-semibold transition-colors uppercase tracking-wider"
+                                    className="mt-3 inline-flex items-center justify-center sm:justify-start gap-2 text-sm text-accentRed hover:text-white font-semibold transition-colors uppercase tracking-wider"
                                 >
                                     <ExternalLink size={14} /> Apri in Maps
                                 </a>
                             </div>
                         </div>
 
-                        <div className="glass-card flex items-start gap-6 p-6 group hover:border-accentBlue/50 transition-colors">
+                        <div className="glass-card flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 sm:gap-6 p-6 md:p-8 group hover:border-accentBlue/50 transition-colors">
                             <div className="w-12 h-12 rounded-full bg-accentBlue/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accentBlue transition-colors">
                                 <Mail className="text-accentBlue group-hover:text-white transition-colors" />
                             </div>
                             <div>
                                 <h4 className="text-xl font-bold text-white mb-2">Scrivici</h4>
-                                <p className="text-gray-400">Hai domande sui corsi o sulle iscrizioni? Affidati alla nostra segreteria via email.</p>
+                                <p className="text-gray-400 text-sm md:text-base">Hai domande sui corsi o sulle iscrizioni? Affidati alla nostra segreteria via email.</p>
                                 <a
                                     href="mailto:polisportivaborghetto@poste.it"
-                                    className="mt-3 inline-block text-lg text-white font-mono hover:text-accentBlue transition-colors"
+                                    className="mt-3 inline-block text-base md:text-lg text-white font-mono hover:text-accentBlue transition-colors break-all"
                                 >
                                     polisportivaborghetto@poste.it
                                 </a>
                             </div>
                         </div>
 
-                        <div className="glass-card flex items-start gap-6 p-6 group hover:border-white/50 transition-colors">
+                        <div className="glass-card flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 sm:gap-6 p-6 md:p-8 group hover:border-white/50 transition-colors">
                             <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-white transition-colors">
                                 <Phone className="text-white group-hover:text-dark transition-colors" />
                             </div>
                             <div className="w-full">
                                 <h4 className="text-xl font-bold text-white mb-4">Chiama</h4>
 
-                                <div className="flex justify-between items-center py-2 border-b border-white/5">
+                                <div className="flex flex-col xl:flex-row justify-between items-center py-3 border-b border-white/5 gap-1">
                                     <span className="text-gray-400 text-sm">Segreteria:</span>
                                     <a href="tel:+393384966252" className="text-white font-mono font-bold hover:text-accentRed transition-colors">338 4966252</a>
                                 </div>
 
-                                <div className="flex justify-between items-center py-2">
+                                <div className="flex flex-col xl:flex-row justify-between items-center py-3 gap-1 mt-1">
                                     <span className="text-gray-400 text-sm">Maestro Info Dirette:</span>
-                                    <a href="tel:+393393400906" className="text-white font-mono font-bold hover:text-accentBlue transition-colors">339 3400906</a>
+                                    <a href="tel:+393393400906" className="text-white font-mono font-bold hover:text-accentBlue transition-colors text-lg">339 3400906</a>
                                 </div>
                             </div>
                         </div>
@@ -92,14 +92,14 @@ const Contact = () => {
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="glass-card !p-2 h-[500px] lg:h-auto overflow-hidden relative group"
+                        className="glass-card !p-2 h-[350px] lg:h-auto overflow-hidden relative group"
                     >
                         {/* Pulsing overlay effect */}
                         <div className="absolute inset-0 bg-gradient-to-br from-accentRed/10 to-accentBlue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10"></div>
 
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2838.452796440263!2d8.887251776518774!3d44.44421440026214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d343db35db8dd7%3A0x643dc52e8071e626!2sVia%20Sidney%20Sonnino%2C%2014%2C%2016159%20Genova%20GE!5e0!3m2!1sit!2sit!4v1709462800000!5m2!1sit!2sit"
-                            className="w-full h-full border-0 rounded-xl"
+                            className="w-full h-full border-0 rounded-xl grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
                             allowFullScreen=""
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"

@@ -50,13 +50,13 @@ const Schedule = () => {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: index * 0.1 }}
-                                    className="p-6 grid md:grid-cols-3 gap-4 items-center hover:bg-white/5 transition-colors cursor-default group"
+                                    className="p-5 md:p-6 grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 items-center text-center md:text-left hover:bg-white/5 transition-colors cursor-default group"
                                 >
                                     <div className="font-heading font-black text-2xl text-white group-hover:text-accentBlue transition-colors">
                                         {slot.day}
                                     </div>
-                                    <div className="flex items-center gap-2 md:justify-center text-accentRed font-bold font-mono text-lg">
-                                        <Clock className="w-5 h-5" />
+                                    <div className="flex items-center justify-center text-accentRed font-bold font-mono text-lg">
+                                        <Clock className="w-5 h-5 mr-2" />
                                         {slot.time}
                                     </div>
                                     <div className="text-gray-400 md:text-right font-medium">
