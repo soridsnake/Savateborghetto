@@ -80,10 +80,10 @@ const Gallery = () => {
 
                 {/* Row 1 - Forward */}
                 <div className="w-[110vw] max-w-none ml-[-5vw] overflow-hidden" ref={emblaRef}>
-                    <div className="flex touch-pan-y h-[250px] md:h-[350px]">
+                    <div className="flex touch-pan-y h-[160px] sm:h-[220px] md:h-[350px]">
                         {rowOneImages.map((src, index) => (
                             <div
-                                className="flex-[0_0_auto] min-w-[300px] md:min-w-[450px] mx-2 md:mx-3 relative group rounded-2xl overflow-hidden shadow-2xl cursor-pointer"
+                                className="flex-[0_0_auto] min-w-[240px] sm:min-w-[320px] md:min-w-[450px] mx-1.5 md:mx-3 relative group rounded-xl md:rounded-2xl overflow-hidden shadow-2xl cursor-pointer"
                                 key={index}
                                 onClick={() => setSelectedImage(src)}
                             >
@@ -99,10 +99,10 @@ const Gallery = () => {
 
                 {/* Row 2 - Backward */}
                 <div className="w-[110vw] max-w-none ml-[-5vw] overflow-hidden" ref={emblaRefReverse}>
-                    <div className="flex touch-pan-y h-[250px] md:h-[350px]">
+                    <div className="flex touch-pan-y h-[160px] sm:h-[220px] md:h-[350px]">
                         {rowTwoImages.map((src, index) => (
                             <div
-                                className="flex-[0_0_auto] min-w-[300px] md:min-w-[450px] mx-2 md:mx-3 relative group rounded-2xl overflow-hidden shadow-2xl cursor-pointer"
+                                className="flex-[0_0_auto] min-w-[240px] sm:min-w-[320px] md:min-w-[450px] mx-1.5 md:mx-3 relative group rounded-xl md:rounded-2xl overflow-hidden shadow-2xl cursor-pointer"
                                 key={index}
                                 onClick={() => setSelectedImage(src)}
                             >
