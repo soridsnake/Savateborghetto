@@ -9,7 +9,7 @@ const courses = [
         subtitle: 'Tecnica & Tocco',
         description: "Il cuore della disciplina. Impara schivate al millimetro e colpi controllati.",
         detailedDescription: "L'assalto è la formula di competizione in cui la potenza dei colpi è rigorosamente vietata. I giudici valutano la precisione, lo stile, l'eleganza delle combinazioni di pugni e calci (Chassé, Fouetté, Revers) e la mobilità nello spazio. Perfetto per chi vuole apprendere l'arte della schivata e della complessa strategia schermistica della Boxe Francese pur senza i rischi del contatto pieno, sviluppando un altissimo livello di agilità e forma fisica.",
-        image: 'https://images.unsplash.com/photo-1599552611410-fcde1ef60b37?q=80&w=800&auto=format&fit=crop',
+        image: 'https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=800&auto=format&fit=crop',
         color: 'from-accentBlue to-blue-600'
     },
     {
