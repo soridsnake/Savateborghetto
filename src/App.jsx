@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Courses from './components/Courses';
+import Gallery from './components/Gallery';
 import Schedule from './components/Schedule';
 import Contact from './components/Contact';
 
@@ -17,6 +18,7 @@ function App() {
                 <Hero />
                 <About />
                 <Courses />
+                <Gallery />
                 <Schedule />
                 <Contact />
             </main>
