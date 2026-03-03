@@ -1,7 +1,7 @@
 import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const images = [
     '/gallery/621801851_854615964079019_7526963880742474779_n.jpg',
