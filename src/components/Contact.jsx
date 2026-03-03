@@ -41,7 +41,7 @@ const Contact = () => {
                                 <h4 className="text-xl font-bold text-white mb-2">Sede Storica</h4>
                                 <p className="text-gray-400">Via Sidney Sonnino 14r<br />16159 Genova (GE) - Certosa</p>
                                 <a
-                                    href="https://maps.google.com/?q=Via+Sidney+Sonnino+14r+Genova"
+                                    href="https://maps.app.goo.gl/wLDw26WiCuGaVjWv6"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="mt-3 inline-flex items-center justify-center sm:justify-start gap-2 text-sm text-accentRed hover:text-white font-semibold transition-colors uppercase tracking-wider"
@@ -59,10 +59,10 @@ const Contact = () => {
                                 <h4 className="text-xl font-bold text-white mb-2">Scrivici</h4>
                                 <p className="text-gray-400 text-sm md:text-base">Hai domande sui corsi o sulle iscrizioni? Affidati alla nostra segreteria via email.</p>
                                 <a
-                                    href="mailto:polisportivaborghetto@poste.it"
+                                    href="mailto:Boxeurs2008@gmail.com"
                                     className="mt-3 inline-block text-base md:text-lg text-white font-mono hover:text-accentBlue transition-colors break-all"
                                 >
-                                    polisportivaborghetto@poste.it
+                                    Boxeurs2008@gmail.com
                                 </a>
                             </div>
                         </div>
@@ -74,14 +74,9 @@ const Contact = () => {
                             <div className="w-full">
                                 <h4 className="text-xl font-bold text-white mb-4">Chiama</h4>
 
-                                <div className="flex flex-col xl:flex-row justify-between items-center py-3 border-b border-white/5 gap-1">
-                                    <span className="text-gray-400 text-sm">Segreteria:</span>
-                                    <a href="tel:+393384966252" className="text-white font-mono font-bold hover:text-accentRed transition-colors">338 4966252</a>
-                                </div>
-
-                                <div className="flex flex-col xl:flex-row justify-between items-center py-3 gap-1 mt-1">
-                                    <span className="text-gray-400 text-sm">Maestro Info Dirette:</span>
-                                    <a href="tel:+393393400906" className="text-white font-mono font-bold hover:text-accentBlue transition-colors text-lg">339 3400906</a>
+                                <div className="flex flex-col xl:flex-row justify-between items-center py-3 gap-1">
+                                    <span className="text-gray-400 text-sm">Contatto Diretto:</span>
+                                    <a href="tel:+393488535857" className="text-white font-mono font-bold hover:text-accentRed transition-colors text-lg">348 8535857</a>
                                 </div>
                             </div>
                         </div>
