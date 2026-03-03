@@ -1,43 +1,58 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { X, ChevronRight } from 'lucide-react';
 
 const courses = [
     {
         id: 'assalto',
         title: 'Savate Assalto',
         subtitle: 'Tecnica & Tocco',
-        description: "Il cuore della disciplina. Impara schivate al millimetro e colpi controllati. L’assalto si fonda sull'agilità, l'eleganza tecnica e il tocco non affondato.",
-        image: 'https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=800&auto=format&fit=crop',
+        description: "Il cuore della disciplina. Impara schivate al millimetro e colpi controllati.",
+        detailedDescription: "L'assalto è la formula di competizione in cui la potenza dei colpi è rigorosamente vietata. I giudici valutano la precisione, lo stile, l'eleganza delle combinazioni di pugni e calci (Chassé, Fouetté, Revers) e la mobilità nello spazio. Perfetto per chi vuole apprendere l'arte della schivata e della complessa strategia schermistica della Boxe Francese pur senza i rischi del contatto pieno, sviluppando un altissimo livello di agilità e forma fisica.",
+        image: 'https://images.unsplash.com/photo-1599552611410-fcde1ef60b37?q=80&w=800&auto=format&fit=crop',
         color: 'from-accentBlue to-blue-600'
     },
     {
         id: 'combat',
         title: 'Savate Combat',
         subtitle: 'Pieno Contatto',
-        description: "La sublimazione agonistica. Potenza e resistenza portate all'estremo: si sale sul ring per vincere per K.O. Disciplina esigente, dedicata agli atleti più esperti.",
-        image: 'https://images.unsplash.com/photo-1622599511051-16f55a1234d0?q=80&w=800&auto=format&fit=crop',
+        description: "La sublimazione agonistica. Potenza e resistenza estrema sul ring per vincere per K.O.",
+        detailedDescription: "Il combattimento (Combat) rappresenta la massima espressione della Boxe Francese sportiva. Qui la potenza è autorizzata e si cerca costantemente la predominanza sull'avversario. Richiede una preparazione fisica eccezionale, enorme resistenza cardiovascolare, coraggio e un condizionamento specifico per incassare e portare colpi efficaci sul ring. Praticata indossando paradenti, conchiglia e le caratteristiche scarpette rigide.",
+        image: 'https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=800&auto=format&fit=crop',
         color: 'from-accentRed to-orange-600'
     },
     {
         id: 'boxe',
         title: 'Boxe & Striking',
         subtitle: 'I Fondamentali',
-        description: "Senza buone mani, non c'è una buona Savate. Il perfezionamento della boxe inglese integrata alle dinamiche di schivata della Boxe Francese.",
-        image: 'https://images.unsplash.com/photo-1599901860904-17e0ed3af3ea?q=80&w=800&auto=format&fit=crop',
+        description: "Perfezionamento della boxe inglese integrata alle dinamiche di schivata della Boxe Francese.",
+        detailedDescription: "Nella Boxe Francese, si dice comunemente che senza buone mani non c'è una buona Savate. Questo corso perfeziona i diretti, ganci e montanti tipici della English Boxing pura, unendola in maniera organica ai fluidi movimenti del tronco ed alle reattività delle gambe caratteristiche della nostra palestra. Una boxe pulita ed esplosiva costituisce la base essenziale per costruire successivamente le combinazioni avanzate di calcio.",
+        image: 'https://images.unsplash.com/photo-1591117207239-788bf8ae6c3b?q=80&w=800&auto=format&fit=crop',
         color: 'from-stone-500 to-stone-400'
     },
     {
         id: 'preparazione',
         title: 'Preparazione',
         subtitle: 'Condizionamento',
-        description: "Forza, esplosività e fiato. Circuiti ad altissima intensità progettati appositamente per condizionare il corpo del lottatore ad affrontare i round più duri sul ring.",
-        image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop',
+        description: "Forza, esplosività e fiato. Circuiti intensivi e condizionamento del corpo al combattimento.",
+        detailedDescription: "La prestazione sul ring richiede un cuore forte e muscoli reattivi pronti a esplodere in una frazione di secondo. Le nostre estenuanti sessioni di preparazione alla Savate includono variazioni continue: salto con la corda in rapidità, lavoro di potenza sul sacco pesante, sparring tecnico guidato, circuit training neuromuscolare e allenamenti massacranti sui pao (colpitori maestri). Costruiamo fisici funzionali in grado di sostenere i ritmi delle riprese da ring.",
+        image: 'https://images.unsplash.com/photo-1583416750470-965b2707b355?q=80&w=800&auto=format&fit=crop',
         color: 'from-emerald-500 to-green-600'
     }
 ];
 
 const Courses = () => {
     const [activeIndex, setActiveIndex] = useState(0);
+    const [selectedCourse, setSelectedCourse] = useState(null);
+
+    // Impedisce lo scorrimento del corpo quando la modale è aperta
+    useEffect(() => {
+        if (selectedCourse) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }, [selectedCourse]);
 
     return (
         <section id="courses" className="py-24 bg-darker relative">
@@ -133,7 +148,13 @@ const Courses = () => {
                                                     <p className="text-white/80 md:text-lg leading-relaxed mb-6 max-w-lg font-light text-shadow-sm">
                                                         {course.description}
                                                     </p>
-                                                    <button className="text-white text-sm font-bold uppercase tracking-widest flex items-center gap-2 hover:text-accentRed transition-colors group/btn">
+                                                    <button
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            setSelectedCourse(course);
+                                                        }}
+                                                        className="text-white text-sm font-bold uppercase tracking-widest flex items-center gap-2 hover:text-accentRed transition-colors group/btn"
+                                                    >
                                                         Dettagli Corso <span className="w-8 h-[2px] bg-accentRed inline-block group-hover/btn:w-12 transition-all"></span>
                                                     </button>
                                                 </motion.div>
@@ -146,6 +167,69 @@ const Courses = () => {
                     })}
                 </div>
             </div>
+
+            {/* Modal Details Overlay */}
+            <AnimatePresence>
+                {selectedCourse && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-darker/90 backdrop-blur-md"
+                        onClick={() => setSelectedCourse(null)}
+                    >
+                        <motion.div
+                            layoutId={`modal-${selectedCourse.id}`} // Optional for layout animations
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                            className="bg-dark border border-white/10 rounded-2xl w-full max-w-3xl overflow-hidden shadow-2xl relative"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            {/* Modal Banner */}
+                            <div
+                                className="h-48 md:h-64 w-full bg-cover bg-center relative"
+                                style={{ backgroundImage: `url(${selectedCourse.image})` }}
+                            >
+                                <div className={`absolute inset-0 bg-gradient-to-tr ${selectedCourse.color} mix-blend-overlay opacity-60`}></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+
+                                <button
+                                    onClick={() => setSelectedCourse(null)}
+                                    className="absolute top-4 right-4 bg-black/50 hover:bg-black/80 text-white rounded-full p-2 transition-colors border border-white/10"
+                                >
+                                    <X className="w-6 h-6" />
+                                </button>
+
+                                <div className="absolute bottom-6 left-6 md:left-10">
+                                    <h4 className="text-accentBlue text-xs md:text-sm font-bold uppercase tracking-widest mb-1 shadow-black">
+                                        {selectedCourse.subtitle}
+                                    </h4>
+                                    <h2 className="text-3xl md:text-5xl font-black uppercase text-white drop-shadow-xl">
+                                        {selectedCourse.title}
+                                    </h2>
+                                </div>
+                            </div>
+
+                            {/* Modal Content */}
+                            <div className="p-6 md:p-10">
+                                <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
+                                    {selectedCourse.detailedDescription}
+                                </p>
+
+                                <div className="flex justify-end">
+                                    <a href="#contact" onClick={() => setSelectedCourse(null)} className="btn-primary flex items-center gap-2 text-sm">
+                                        Prenota una Lezione <ChevronRight className="w-4 h-4" />
+                                    </a>
+                                </div>
+                            </div>
+
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
         </section>
     );
 };

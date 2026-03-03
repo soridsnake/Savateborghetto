@@ -3,9 +3,8 @@ import { motion } from 'framer-motion';
 import { Calendar, Clock, AlertCircle } from 'lucide-react';
 
 const schedule = [
-    { day: 'Lunedì', time: '20:30 - 22:30', class: 'Savate Agonisti & Amatori' },
-    { day: 'Mercoledì', time: '20:30 - 22:30', class: 'Savate (Sparring & Tecnica)' },
-    { day: 'Venerdì / Giovedì', time: '20:30 - 22:30', class: 'Preparazione Fisica' },
+    { day: 'Lunedì', time: '20:30 - 22:30', class: 'Corso Savate' },
+    { day: 'Giovedì', time: '20:30 - 22:30', class: 'Corso Savate' }
 ];
 
 const Schedule = () => {

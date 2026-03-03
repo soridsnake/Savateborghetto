@@ -167,19 +167,6 @@ const About = () => {
                                     Colonna portante della Polisportiva. Unisce decenni di esperienza sui ring alla profonda conoscenza tecnica della Savate tradizionale francese. La sua storia incarna i valori del Borghetto.
                                 </p>
                             </motion.div>
-
-                            {/* Daniele Bottero */}
-                            <motion.div
-                                whileHover={{ x: 10 }}
-                                className="group relative pl-8 border-l-2 border-white/10 hover:border-accentBlue transition-colors cursor-default"
-                            >
-                                <div className="absolute top-0 -left-[11px] w-5 h-5 rounded-full bg-darker border-2 border-white/20 group-hover:border-accentBlue group-hover:bg-accentBlue transition-all shadow-[0_0_10px_rgba(0,240,255,0)] group-hover:shadow-[0_0_10px_rgba(0,240,255,0.8)]"></div>
-                                <h4 className="text-2xl font-bold text-white mb-1 group-hover:text-accentBlue transition-colors">Istruttore Daniele Bottero</h4>
-                                <div className="text-xs uppercase tracking-widest text-accentRed mb-3 font-semibold bg-accentRed/10 inline-block px-3 py-1 rounded-full">Tecnica e Dinamismo</div>
-                                <p className="text-sm md:text-base text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
-                                    Preparazione atletica all'avanguardia. Specializzato negli allenamenti ad alta intensità per atleti che mirano al superamento dei propri limiti fisici e mentali. L'energia della nuova generazione.
-                                </p>
-                            </motion.div>
                         </div>
                     </motion.div>
 
