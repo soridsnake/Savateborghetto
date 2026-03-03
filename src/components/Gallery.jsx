@@ -14,14 +14,18 @@ const images = [
     '/gallery/631088578_867120009495281_6297230439781311542_n.jpg',
     '/gallery/633509224_869881365885812_7118345812094664593_n.jpg',
     '/gallery/645805153_884712094402739_1154084098491617035_n.jpg',
-    '/gallery/645865191_884711987736087_4583908917819263936_n.jpg',
+    '/gallery/645865191_884711987736083_4583908917819263936_n.jpg',
     '/gallery/645903290_884712054402743_7677284822330335894_n.jpg',
     '/gallery/645915081_884711947736087_359615358705116384_n.jpg',
     '/gallery/646133805_884711914402757_3815039604104631912_n.jpg',
     '/gallery/646141738_884712024402746_8031243329854533426_n.jpg'
 ];
 
+import { X } from 'lucide-react';
+
 const Gallery = () => {
+    const [selectedImage, setSelectedImage] = React.useState(null);
+
     // Basic Carousel
     const [emblaRef] = useEmblaCarousel({
         loop: true,
@@ -39,6 +43,15 @@ const Gallery = () => {
 
     const rowOneImages = images.slice(0, Math.ceil(images.length / 2));
     const rowTwoImages = images.slice(Math.ceil(images.length / 2));
+
+    // Impedisce lo scorrimento del corpo quando la modale è aperta
+    React.useEffect(() => {
+        if (selectedImage) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }, [selectedImage]);
 
     return (
         <section id="gallery" className="py-24 bg-dark relative overflow-hidden border-t border-white/5">
@@ -69,7 +82,11 @@ const Gallery = () => {
                 <div className="w-[110vw] max-w-none ml-[-5vw] overflow-hidden" ref={emblaRef}>
                     <div className="flex touch-pan-y h-[250px] md:h-[350px]">
                         {rowOneImages.map((src, index) => (
-                            <div className="flex-[0_0_auto] min-w-[300px] md:min-w-[450px] mx-2 md:mx-3 relative group rounded-2xl overflow-hidden shadow-2xl" key={index}>
+                            <div
+                                className="flex-[0_0_auto] min-w-[300px] md:min-w-[450px] mx-2 md:mx-3 relative group rounded-2xl overflow-hidden shadow-2xl cursor-pointer"
+                                key={index}
+                                onClick={() => setSelectedImage(src)}
+                            >
                                 <div
                                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 filter grayscale group-hover:grayscale-0"
                                     style={{ backgroundImage: `url('${src}')` }}
@@ -84,7 +101,11 @@ const Gallery = () => {
                 <div className="w-[110vw] max-w-none ml-[-5vw] overflow-hidden" ref={emblaRefReverse}>
                     <div className="flex touch-pan-y h-[250px] md:h-[350px]">
                         {rowTwoImages.map((src, index) => (
-                            <div className="flex-[0_0_auto] min-w-[300px] md:min-w-[450px] mx-2 md:mx-3 relative group rounded-2xl overflow-hidden shadow-2xl" key={index}>
+                            <div
+                                className="flex-[0_0_auto] min-w-[300px] md:min-w-[450px] mx-2 md:mx-3 relative group rounded-2xl overflow-hidden shadow-2xl cursor-pointer"
+                                key={index}
+                                onClick={() => setSelectedImage(src)}
+                            >
                                 <div
                                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 filter grayscale group-hover:grayscale-0"
                                     style={{ backgroundImage: `url('${src}')` }}
@@ -96,6 +117,37 @@ const Gallery = () => {
                 </div>
 
             </div>
+
+            {/* Modal Highlights - Full Screen Image Viewer */}
+            <AnimatePresence>
+                {selectedImage && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-darker/95 backdrop-blur-md"
+                        onClick={() => setSelectedImage(null)}
+                    >
+                        <button
+                            onClick={() => setSelectedImage(null)}
+                            className="absolute top-6 right-6 lg:top-10 lg:right-10 bg-white/10 hover:bg-white/20 text-white rounded-full p-3 transition-colors border border-white/20 z-[110]"
+                        >
+                            <X className="w-8 h-8" />
+                        </button>
+
+                        <motion.img
+                            initial={{ scale: 0.9, y: 20 }}
+                            animate={{ scale: 1, y: 0 }}
+                            exit={{ scale: 0.9, y: 20 }}
+                            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                            src={selectedImage}
+                            alt="Foto Borghetto 1867"
+                            className="max-w-full max-h-[90vh] object-contain rounded-xl shadow-[0_0_50px_rgba(0,0,0,0.8)] border border-white/10"
+                            onClick={(e) => e.stopPropagation()}
+                        />
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 };
