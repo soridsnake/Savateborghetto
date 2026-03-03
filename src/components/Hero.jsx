@@ -137,11 +137,13 @@ const Hero = () => {
                     >
                         <div className="absolute inset-0 bg-gradient-to-br from-accentRed/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         <div className="relative z-10 w-full text-center">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Flag_of_France.svg/320px-Flag_of_France.svg.png"
-                                alt="Boxe Francese"
-                                className="w-16 h-auto mx-auto mb-6 rounded shadow-md opacity-80 group-hover:opacity-100 transition-opacity"
-                            />
+                            <div className="flex justify-center mb-6">
+                                <div className="flex h-10 rounded shadow-md overflow-hidden opacity-80 group-hover:opacity-100 transition-opacity border border-white/10">
+                                    <div className="w-5 bg-blue-700"></div>
+                                    <div className="w-5 bg-white"></div>
+                                    <div className="w-5 bg-red-600"></div>
+                                </div>
+                            </div>
                             <h3 className="text-3xl font-black text-white mb-2 group-hover:text-accentRed transition-colors drop-shadow-md">BOXE FRANCESE</h3>
                             <p className="text-gray-400 text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2">
                                 <span className="w-2 h-2 rounded-full bg-accentBlue animate-pulse"></span>

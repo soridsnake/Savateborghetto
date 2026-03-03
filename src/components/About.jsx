@@ -137,6 +137,52 @@ const About = () => {
                     </motion.div>
                 </motion.div>
 
+                {/* Agonismo & Gradi Section */}
+                <div className="grid lg:grid-cols-2 gap-12 mb-24">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="glass-card p-8 border-accentRed/30 relative overflow-hidden group"
+                    >
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-accentRed/5 rounded-full blur-2xl -z-10"></div>
+                        <h3 className="text-3xl font-black text-white mb-4 uppercase">L'Agonismo e il <span className="text-accentRed">Confronto</span></h3>
+                        <p className="text-gray-300 leading-relaxed mb-4">
+                            Il nostro percorso sportivo non si ferma alle mure della palestra. Per chi sceglie la via competitiva, <strong>il ring è il banco di prova definitivo</strong>.
+                        </p>
+                        <p className="text-gray-400 leading-relaxed">
+                            Organizziamo e prepariamo regolarmente i nostri atleti per veri <strong>incontri agonistici</strong>. Non ci limitiamo a sfidare altre scuole o accademie di Savate, ma promuoviamo apertamente il confronto costruttivo salendo sul ring contro sfidanti provenienti da <strong>discipline marziali esterne</strong>, come la Kickboxing, K1 o Muay Thai. Mettersi in gioco contro stili e background differenti affina il nostro bagaglio tecnico e forgia una tempra di ferro.
+                        </p>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="glass-card p-8 border-accentBlue/30 relative overflow-hidden"
+                    >
+                        <div className="absolute top-0 left-0 w-32 h-32 bg-accentBlue/5 rounded-full blur-2xl -z-10"></div>
+                        <h3 className="text-3xl font-black text-white mb-4 uppercase">Il Percorso dei <span className="text-accentBlue">Guanti</span></h3>
+                        <p className="text-gray-300 leading-relaxed mb-6">
+                            Nella Savate non esistono le "cinture". La progressione dell'atleta è scandita gerarchicamente e storicamente dal colore dei <strong>Guanti D'Arme</strong>. Ognuno si conquista superando rigidissimi esami pratici presso atenei F.I.S.A.:
+                        </p>
+
+                        <div className="flex flex-wrap gap-3">
+                            <span className="px-4 py-2 rounded-lg border border-blue-500/30 bg-blue-500/10 text-blue-400 font-bold uppercase text-sm flex items-center gap-2"><div className="w-2.5 h-2.5 rounded-full bg-blue-500"></div> Blu</span>
+                            <span className="px-4 py-2 rounded-lg border border-green-500/30 bg-green-500/10 text-green-400 font-bold uppercase text-sm flex items-center gap-2"><div className="w-2.5 h-2.5 rounded-full bg-green-500"></div> Verde</span>
+                            <span className="px-4 py-2 rounded-lg border border-red-500/30 bg-red-500/10 text-accentRed font-bold uppercase text-sm flex items-center gap-2"><div className="w-2.5 h-2.5 rounded-full bg-accentRed shadow-[0_0_10px_#ff2a5f]"></div> Rosso</span>
+                            <span className="px-4 py-2 rounded-lg border border-white/30 bg-white/10 text-white font-bold uppercase text-sm flex items-center gap-2"><div className="w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_10px_white]"></div> Bianco</span>
+                            <span className="px-4 py-2 rounded-lg border border-yellow-500/30 bg-yellow-500/10 text-yellow-400 font-bold uppercase text-sm flex items-center gap-2"><div className="w-2.5 h-2.5 rounded-full bg-yellow-400 shadow-[0_0_10px_yellow]"></div> Giallo</span>
+                            <span className="px-4 py-2 rounded-lg border border-gray-400/50 bg-gray-400/20 text-gray-100 font-black uppercase text-sm flex items-center gap-2"><div className="w-2.5 h-2.5 rounded-full bg-slate-300 shadow-[0_0_15px_#e2e8f0]"></div> Argento</span>
+                        </div>
+                        <p className="text-gray-400 text-sm mt-6 leading-relaxed">
+                            L'esame per il <em>Guanto D'Argento Tecnico</em> è il coronamento accademico che sancisce la maestria assoluta di ogni Savateur.
+                        </p>
+                    </motion.div>
+                </div>
+
                 {/* Instructors Section */}
                 <div className="grid lg:grid-cols-2 gap-12 items-center bg-darker/80 p-8 md:p-12 rounded-[2.5rem] border border-white/5 relative overflow-hidden shadow-glass backdrop-blur-xl">
                     <div className="absolute -top-40 -right-40 w-96 h-96 bg-accentRed/10 rounded-full blur-[100px] pointer-events-none"></div>
