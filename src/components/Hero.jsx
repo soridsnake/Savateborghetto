@@ -24,7 +24,7 @@ const Hero = () => {
             {/* Background Image & Overlay */}
             <div
                 className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url('https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=2000&auto=format&fit=crop')` }}
+                style={{ backgroundImage: `url('${import.meta.env.BASE_URL}gallery/645805153_884712094402739_1154084098491617035_n.jpg')` }}
             >
                 <div className="absolute inset-0 bg-gradient-to-b from-dark/60 via-dark/80 to-dark"></div>
             </div>

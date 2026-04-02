@@ -18,6 +18,7 @@ const Navbar = () => {
         { name: 'Home', href: '#home' },
         { name: 'Storia', href: '#about' },
         { name: 'Corsi', href: '#courses' },
+        { name: 'Gallery', href: '#gallery' },
         { name: 'Orari', href: '#schedule' },
         { name: 'Contatti', href: '#contact' },
     ];
@@ -28,15 +29,23 @@ const Navbar = () => {
                 }`}
         >
             <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
-                <motion.div
+                <motion.a
+                    href="#home"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="text-xl md:text-2xl font-heading font-black tracking-wider text-white relative group"
+                    className="flex items-center gap-3 relative group"
                 >
-                    BORGHETTO <span className="text-accentRed">1867</span>
+                    <img
+                        src={`${import.meta.env.BASE_URL}gallery/logo.jpg`}
+                        alt="Logo Borghetto 1867"
+                        className="w-10 h-10 rounded-full object-cover border border-white/20 group-hover:border-accentRed transition-colors"
+                    />
+                    <span className="text-xl md:text-2xl font-heading font-black tracking-wider text-white">
+                        BORGHETTO <span className="text-accentRed">1867</span>
+                    </span>
                     <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-accentRed transition-all duration-300 group-hover:w-full"></span>
-                </motion.div>
+                </motion.a>
 
                 {/* Desktop Nav */}
                 <div className="hidden md:flex gap-8">
