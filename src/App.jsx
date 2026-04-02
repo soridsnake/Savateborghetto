@@ -6,6 +6,7 @@ import About from './components/About';
 import Courses from './components/Courses';
 import Gallery from './components/Gallery';
 import Schedule from './components/Schedule';
+import Flyers from './components/Flyers';
 import Contact from './components/Contact';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                 <Courses />
                 <Gallery />
                 <Schedule />
+                <Flyers />
                 <Contact />
             </main>
 
