@@ -74,9 +74,13 @@ const Contact = () => {
                             <div className="w-full">
                                 <h4 className="text-xl font-bold text-white mb-4">Chiama</h4>
 
-                                <div className="flex flex-col xl:flex-row justify-between items-center py-3 gap-1">
-                                    <span className="text-gray-400 text-sm">Contatto Diretto:</span>
+                                <div className="flex flex-col xl:flex-row justify-between items-center py-3 border-b border-white/5 gap-1">
+                                    <span className="text-gray-400 text-sm">Bruno:</span>
                                     <a href="tel:+393488535857" className="text-white font-mono font-bold hover:text-accentRed transition-colors text-lg">348 8535857</a>
+                                </div>
+                                <div className="flex flex-col xl:flex-row justify-between items-center py-3 gap-1">
+                                    <span className="text-gray-400 text-sm">Laura:</span>
+                                    <a href="tel:+393420483752" className="text-white font-mono font-bold hover:text-accentRed transition-colors text-lg">342 0483752</a>
                                 </div>
                             </div>
                         </div>

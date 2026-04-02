@@ -3,8 +3,12 @@ import { motion } from 'framer-motion';
 import { Calendar, Clock, AlertCircle } from 'lucide-react';
 
 const schedule = [
-    { day: 'Lunedì', time: '20:30 - 22:30', class: 'Corso Savate' },
-    { day: 'Giovedì', time: '20:30 - 22:30', class: 'Corso Savate' }
+    { day: 'Lunedì', time: '16:30 - 17:45', class: 'Corso Canguri — Agonisti & Amatori' },
+    { day: 'Lunedì', time: '20:30 - 22:30', class: 'Corso Savate — Adulti' },
+    { day: 'Giovedì', time: '16:30 - 17:30', class: 'Corso Canguri — età 6-10 anni' },
+    { day: 'Giovedì', time: '17:30 - 18:45', class: 'Corso Canguri — età 11-16 anni' },
+    { day: 'Giovedì', time: '20:30 - 22:30', class: 'Corso Savate — Adulti' },
+    { day: 'Sabato', time: '09:00 - 11:00', class: 'Allenamento Agonisti' },
 ];
 
 const Schedule = () => {
