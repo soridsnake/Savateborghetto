@@ -88,10 +88,12 @@ const Gallery = () => {
                                 key={index}
                                 onClick={() => setSelectedImage(src)}
                             >
-                                <div
-                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 filter grayscale group-hover:grayscale-0"
-                                    style={{ backgroundImage: `url('${src}')` }}
-                                ></div>
+                                <img
+                                    src={src}
+                                    alt=""
+                                    loading="lazy"
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                                />
                                 <div className="absolute inset-0 bg-dark/40 group-hover:bg-transparent transition-colors duration-500"></div>
                             </div>
                         ))}
@@ -107,10 +109,12 @@ const Gallery = () => {
                                 key={index}
                                 onClick={() => setSelectedImage(src)}
                             >
-                                <div
-                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 filter grayscale group-hover:grayscale-0"
-                                    style={{ backgroundImage: `url('${src}')` }}
-                                ></div>
+                                <img
+                                    src={src}
+                                    alt=""
+                                    loading="lazy"
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                                />
                                 <div className="absolute inset-0 bg-dark/40 group-hover:bg-transparent transition-colors duration-500"></div>
                             </div>
                         ))}

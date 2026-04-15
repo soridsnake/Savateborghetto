@@ -51,6 +51,7 @@ const Flyers = () => {
                             <img
                                 src={flyer.src}
                                 alt={flyer.title}
+                                loading="lazy"
                                 className="w-full object-cover"
                             />
                             <div className="bg-dark/80 backdrop-blur px-5 py-4">

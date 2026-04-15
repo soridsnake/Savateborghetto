@@ -39,9 +39,10 @@ const Navbar = () => {
                     <img
                         src={`${import.meta.env.BASE_URL}gallery/logo.jpg`}
                         alt="Logo Borghetto 1867"
-                        className="w-10 h-10 rounded-full object-cover border border-white/20 group-hover:border-accentRed transition-colors"
+                        loading="eager"
+                        className="w-9 h-9 md:w-10 md:h-10 rounded-full object-cover border border-white/20 group-hover:border-accentRed transition-colors flex-shrink-0"
                     />
-                    <span className="text-xl md:text-2xl font-heading font-black tracking-wider text-white">
+                    <span className="text-lg md:text-2xl font-heading font-black tracking-wider text-white">
                         BORGHETTO <span className="text-accentRed">1867</span>
                     </span>
                     <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-accentRed transition-all duration-300 group-hover:w-full"></span>

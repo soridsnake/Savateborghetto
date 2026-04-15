@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import { Calendar, Clock, AlertCircle } from 'lucide-react';
 
 const schedule = [
-    { day: 'Lunedì', time: '16:30 - 17:45', class: 'Corso Canguri — Agonisti & Amatori' },
-    { day: 'Lunedì', time: '20:30 - 22:30', class: 'Corso Savate — Adulti' },
-    { day: 'Giovedì', time: '16:30 - 17:30', class: 'Corso Canguri — età 6-10 anni' },
-    { day: 'Giovedì', time: '17:30 - 18:45', class: 'Corso Canguri — età 11-16 anni' },
-    { day: 'Giovedì', time: '20:30 - 22:30', class: 'Corso Savate — Adulti' },
-    { day: 'Sabato', time: '09:00 - 11:00', class: 'Allenamento Agonisti' },
+    { day: 'Lunedì', time: '16:30 - 17:45', class: 'Canguri', detail: 'Agonisti & Amatori' },
+    { day: 'Lunedì', time: '20:30 - 22:30', class: 'Savate', detail: 'Adulti' },
+    { day: 'Giovedì', time: '16:30 - 17:30', class: 'Canguri', detail: '6-10 anni' },
+    { day: 'Giovedì', time: '17:30 - 18:45', class: 'Canguri', detail: '11-16 anni' },
+    { day: 'Giovedì', time: '20:30 - 22:30', class: 'Savate', detail: 'Adulti' },
+    { day: 'Sabato', time: '09:00 - 11:00', class: 'Agonisti', detail: null },
 ];
 
 const Schedule = () => {
@@ -63,8 +63,13 @@ const Schedule = () => {
                                         <Clock className="w-5 h-5 mr-2" />
                                         {slot.time}
                                     </div>
-                                    <div className="text-gray-400 md:text-right font-medium">
-                                        {slot.class}
+                                    <div className="flex items-center justify-center md:justify-end gap-2 flex-wrap">
+                                        <span className="text-gray-300 font-medium">{slot.class}</span>
+                                        {slot.detail && (
+                                            <span className="text-xs px-2 py-0.5 rounded-full bg-white/10 text-gray-400 border border-white/10">
+                                                {slot.detail}
+                                            </span>
+                                        )}
                                     </div>
                                 </motion.div>
                             ))}

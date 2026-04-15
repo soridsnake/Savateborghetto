@@ -73,7 +73,7 @@ const Hero = () => {
                             Polisportiva Dilettantistica Borghetto 1867
                         </motion.h2>
 
-                        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[1.1] mb-6 tracking-tight relative">
+                        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-[1.1] mb-6 tracking-tight relative">
                             L'ELEGANZA DELLA <br className="hidden md:block" />
                             <span className="relative inline-block mt-2">
                                 <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-accentRed to-white">
