@@ -120,7 +120,7 @@ const About = () => {
                         </div>
                         <h3 className="text-lg md:text-xl font-bold mb-3 text-white">Eccellenza Sportiva</h3>
                         <p className="text-gray-400 text-sm leading-relaxed">
-                            Un vivaio di campioni. I nostri atleti gareggiano regolarmente nei circuiti F.I.S.A., portando in alto i colori del Borghetto 1867.
+                            Un vivaio di campioni. I nostri atleti gareggiano regolarmente nei circuiti MSP Kombat Tour Italia, portando in alto i colori del Borghetto 1867.
                         </p>
                     </motion.div>
 
@@ -166,7 +166,7 @@ const About = () => {
                         <div className="absolute top-0 left-0 w-32 h-32 bg-accentBlue/5 rounded-full blur-2xl -z-10"></div>
                         <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase">Il Percorso dei <span className="text-accentBlue">Guanti</span></h3>
                         <p className="text-gray-300 leading-relaxed mb-6">
-                            Nella Savate non esistono le "cinture". La progressione dell'atleta è scandita gerarchicamente e storicamente dal colore dei <strong>Guanti D'Arme</strong>. Ognuno si conquista superando rigidissimi esami pratici presso atenei F.I.S.A.:
+                            Nella Savate non esistono le "cinture". La progressione dell'atleta è scandita gerarchicamente e storicamente dal colore dei <strong>Guanti D'Arme</strong>. Ognuno si conquista superando rigidissimi esami pratici presso atenei MSP Kombat Tour Italia:
                         </p>
 
                         <div className="flex flex-wrap gap-3">
@@ -208,7 +208,7 @@ const About = () => {
                             >
                                 <div className="absolute top-0 -left-[11px] w-5 h-5 rounded-full bg-darker border-2 border-white/20 group-hover:border-accentRed group-hover:bg-accentRed transition-all shadow-[0_0_10px_rgba(255,42,95,0)] group-hover:shadow-[0_0_10px_rgba(255,42,95,0.8)]"></div>
                                 <h4 className="text-2xl font-bold text-white mb-1 group-hover:text-accentRed transition-colors">Maestro Bruno D'Astice</h4>
-                                <div className="text-xs uppercase tracking-widest text-accentBlue mb-3 font-semibold bg-accentBlue/10 inline-block px-3 py-1 rounded-full">Affiliazione F.I.S.A.</div>
+                                <div className="text-xs uppercase tracking-widest text-accentBlue mb-3 font-semibold bg-accentBlue/10 inline-block px-3 py-1 rounded-full">MSP Kombat Tour Italia</div>
                                 <p className="text-sm md:text-base text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
                                     Colonna portante della Polisportiva. Unisce decenni di esperienza sui ring alla profonda conoscenza tecnica della Savate tradizionale francese. La sua storia incarna i valori del Borghetto.
                                 </p>
