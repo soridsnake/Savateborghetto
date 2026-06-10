@@ -13,6 +13,16 @@ const flyers = [
         title: 'Savate Adulti',
         subtitle: 'Amatori & Agonisti',
     },
+    {
+        src: `${import.meta.env.BASE_URL}images/cammino_savate.jpeg`,
+        title: 'Il Cammino della Savate',
+        subtitle: 'Gradi Tecnici & Progressione',
+    },
+    {
+        src: `${import.meta.env.BASE_URL}images/regolamento.jpeg`,
+        title: 'Codice di Comportamento',
+        subtitle: 'Valori & Regolamento',
+    },
 ];
 
 const Flyers = () => {
